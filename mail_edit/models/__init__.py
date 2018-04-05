@@ -4,3 +4,4 @@
 
 from . import compose_message
 from . import res_request_link
+from . import mail_message
