@@ -7,6 +7,7 @@ openerp.mail_edit = function (instance) {
         bind_events: function () {
             this._super.apply(this, arguments);
             this.$('.oe_edit').on('click', this.on_message_edit);
+            this.$('.oe_delete').on('click', this.on_message_delete);
         },
 
         on_message_edit: function () {
@@ -39,6 +40,19 @@ openerp.mail_edit = function (instance) {
                     },
                 });
             });
+        },
+
+        on_message_delete: function (e) {
+            var mail_message_model = new openerp.Model('mail.message');
+            var self = this;
+            mail_message_model.call('unlink', [this.id]).then(
+                function (result){
+                    var parent = self.getParent().getParent().getParent()
+                        .getParent()
+                    if (typeof parent.model !== "undefined") {
+                        parent.reload()
+                    }
+            })
         }
     });
 };

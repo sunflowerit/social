@@ -6,6 +6,9 @@
             <span class="oe_edit">
                 <a title="Edit Mail" class="oe_e">&#038;</a>
             </span>
+            <span class="oe_delete">
+                <a title="Delete" class="oe_e">[</a>
+            </span>
         </t>
     </t>
 </template>
