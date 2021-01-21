@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <t t-extend="mail.widget.Thread.Message">
+        <t t-jquery=".o_mail_info" t-operation="append">
+            <t t-if="message.is_author or message.is_superuser">
+                <span class="o_thread_edit_icon">
+                    <i class="fa o_thread_icon o_mail_edit fa-pencil" t-att-data-message-id="message.getID()" title="Edit Mail"/>
+                </span>
+                <span class="o_thread_delete_icon">
+                    <i class="fa o_thread_icon o_mail_delete fa-trash" t-att-data-message-id="message.getID()" title="Delete Mail"/>
+                </span>
+            </t>
+        </t>
+    </t>
+</template>
+
