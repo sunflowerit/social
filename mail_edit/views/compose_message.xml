@@ -23,6 +23,10 @@
                     </group>
                 </group>
                 <field name="body" groups="mail_edit.group_mail_edit_editor,mail_edit.group_mail_edit_superuser"/>
+                <footer>
+                    <button string="Save" special="save" class="btn-primary"/>
+                    <button string="Discard" class="btn-secondary" special="cancel" />
+                </footer>
             </sheet>
         </form>
     </field>
