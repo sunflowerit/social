@@ -10,6 +10,9 @@
     var SearchableThread = require('mail.model.SearchableThread');
     var DocumentThread = require('mail.model.DocumentThread');
 
+    var core = require('web.core');
+    var _t = core._t;
+
     SearchableThread.include({
         init: function() {
             this._super.apply(this, arguments);
@@ -61,7 +64,6 @@
                         })
                         .then(function (messagesData) {
                             var thread = self.call('mail_service', 'getThread', self._currentThreadID);
-                            console.log(messagesData[0]);
                             // TODO: update other fields as well, and call processBody.
                             message._body = messagesData[0].body;
                             self.render(thread, {});
