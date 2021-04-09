@@ -21,6 +21,9 @@
         "views/assets.xml",
         "views/compose_message.xml",
     ],
+    "demo": [
+        "demo/data.xml"
+    ],
     "qweb": [
         "static/src/xml/mail_edit.xml",
     ],
