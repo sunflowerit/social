@@ -30,7 +30,7 @@ tour.register('mail_edit_tour', {
     content: _t("Post your message on the thread"),
     position: "top",
 }, {
-    trigger: '.o_mail_discuss .o_thread_edit_icon .o_mail_edit',
+    trigger: '.o_thread_message_core .o_thread_edit_icon .o_mail_edit',
     content: _t("Click the Edit Icon"),
     position: "right",
 }, {
@@ -43,7 +43,7 @@ tour.register('mail_edit_tour', {
     content: _t("Save Changes"),
     run: 'click',
 }, {
-    trigger: '.o_mail_discuss .o_thread_delete_icon .o_mail_delete:last',
+    trigger: '.o_thread_message_core .o_thread_delete_icon .o_mail_delete:last',
     content: _t("Click the Delete Icon on the last message"),
     position: "right",
 }, {
