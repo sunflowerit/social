@@ -14,25 +14,36 @@ tour.register('mail_edit_tour', {
     position: 'right',
     edition: 'community',
 }, {
-    trigger: ".o_mail_discuss_item[data-thread-id=1]",
+    trigger: '.o_add[data-type="public"]',
+    content: _t("Channels -> Add button"),
+    position: 'bottom',
+}, {
+    trigger: '.o_mail_add_thread[data-type="public"]',
+    content: _t("Add a new Channel"),
+    position: 'right',
+    run: function (actions) {
+        actions.text("Mail-Edit Channel", this.$anchor.find("input"));
+    },
+}, {
+    trigger: ".ui-menu-item > a",
     auto: true,
     in_modal: false,
 }, {
-    trigger: '.o_mail_discuss .o_composer_text_field',
+    trigger: '.o_composer_text_field',
     content: _t("Add some text message to the composer chat box"),
-    position: "top",
-    width: 350,
+    position: "bottom",
     run: function (actions) {
         actions.text("Sample Message to be edited & Deleted!", this.$anchor);
     },
 }, {
-    trigger: '.o_mail_discuss .o_thread_composer .o_composer_button_send',
+    trigger: '.o_composer_send > button',
+    extra_trigger: '.o_composer_button_send',
     content: _t("Post your message on the thread"),
-    position: "top",
+    position: "bottom",
 }, {
-    trigger: '.o_thread_message_core .o_thread_edit_icon .o_mail_edit',
+    trigger: '.o_mail_edit',
     content: _t("Click the Edit Icon"),
-    position: "right",
+    position: "bottom",
 }, {
     trigger: "input[name=subject]",
     content: _t("Edit Mail Subject"),
@@ -43,9 +54,9 @@ tour.register('mail_edit_tour', {
     content: _t("Save Changes"),
     run: 'click',
 }, {
-    trigger: '.o_thread_message_core .o_thread_delete_icon .o_mail_delete:last',
+    trigger: '.o_mail_delete:last',
     content: _t("Click the Delete Icon on the last message"),
-    position: "right",
+    position: "bottom",
 }, {
     trigger: 'button span:contains(Ok)',
     extra_trigger: '.modal-footer',
