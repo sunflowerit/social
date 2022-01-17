@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
-    <t t-extend="mail.widget.Thread.Message">
-        <t t-jquery=".o_mail_info" t-operation="append">
-            <t t-if="message.is_author or message.is_superuser">
-                <span class="o_thread_edit_icon">
-                    <i class="fa o_thread_icon o_mail_edit fa-pencil" t-att-data-message-id="message.getID()" title="Edit Mail"/>
-                </span>
-                <span class="o_thread_delete_icon">
-                    <i class="fa o_thread_icon o_mail_delete fa-trash" t-att-data-message-id="message.getID()" title="Delete Mail"/>
-                </span>
-            </t>
-        </t>
+<!--    Put the buttons in the view for odoo 14-->
+    <t t-name="MyComponent" t-inherit="mail.Message" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('o_Message_headerCommands')]" position="after">
+             <button class="o_edit_message o_mail_edit btn btn-link" t-on-click="_onClickEdit">
+            <i class="fa fa-pencil"/>
+         </button>
+            <button class="o_delete_message o_mail_delete btn btn-link" t-on-click="_onClickDelete">
+            <i class="fa fa-trash"/>
+         </button>
+            </xpath>
     </t>
 </template>
 
