@@ -1,20 +1,23 @@
-const { useState } = owl.hooks;
-const { xml } = owl.tags;
-const { Component } = owl;
+/* © 2014-2017 Sunflower IT <www.sunflowerweb.nl>*/
+odoo.define("mail_edit/static/src/js/new_mail_edit.js",
+    function (require) {
+        "use strict";
 
-class MyComponent extends Component {
+        const components = {
+            Message: require("mail/static/src/components/message/message.js"),
+        };
+        const {patch} = require("web.utils");
 
-
-    setup() {
-        this.state = useState({ value: 1 });
+        patch(components.Message, "mail_edit.main", {
+            async _onClickEdit(ev) {
+                ev.stopPropagation();
+                const action = await this.rpc({
+                    route: "/web/action/load",
+                    params: {action_id: "mail_edit.mail_edit_action"},
+                });
+                action.res_id = this.message.id;
+                this.env.bus.trigger("do-action", {action: action});
+            },
+        });
     }
-    _onClickEdit(ev){
-
-    }
-
-    _onClickDelete(ev){
-
-    }
-
-}
-MyComponent.template = 'mail_edit.MyComponent';
+);
