@@ -2,7 +2,7 @@
  * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
  */
 
-.o_mail_thread .o_thread_message {
+.o_Message {
     .o_mail_edit, .o_mail_delete {
         cursor: pointer;
         opacity: 0;
