@@ -25,6 +25,6 @@
         "demo/data.xml"
     ],
     "qweb": [
-        "static/src/xml/mail_edit.xml",
+        "static/src/components/message/xml/mail_edit.xml",
     ],
 }

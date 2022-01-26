@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+<!--    Put the buttons in the view for odoo 14-->
+    <t t-name="MyComponent" t-inherit="mail.Message" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('o_Message_header')]" t-operation="inside">
+            <span class="o_edit_message o_mail_edit btn btn-link" t-on-click="_onClickEdit" title="Edit Message"> <i class="fa fa-pencil"/></span>
+            <span class="o_delete_message o_mail_delete btn btn-link" t-on-click="_onClickDelete" title="Delete Message"> <i class="fa fa-trash"/></span>
+            </xpath>
+    </t>
+</template>
+
