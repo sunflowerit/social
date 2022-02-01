@@ -3,21 +3,19 @@
  */
 
 .o_Message {
-    .o_mail_edit, .o_mail_delete {
+    .o_mail_edit_delete{
         cursor: pointer;
         opacity: 0;
-        padding: 5px;
+        padding: 4px;
+    }
+
+    &.o-clicked .o_mail_edit_delete {
+        opacity: 0.6;
     }
 
     &:hover {
-        .o_mail_edit {
-            opacity: 0.5;
-            &:hover {
-                opacity: 1;
-            }
-        }
-        .o_mail_delete {
-            opacity: 0.5;
+        .o_mail_edit_delete{
+            opacity: 0.6;
             &:hover {
                 opacity: 1;
             }
