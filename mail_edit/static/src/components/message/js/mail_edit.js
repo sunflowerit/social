@@ -25,7 +25,7 @@ odoo.define("mail_edit/static/src/js/mail_edit.js",
                     self.env.bus.trigger("do-action", {action: action});
 
                 } else {
-                Dialog.alert(self, "Sorry, you are not allowed to do that.Contact the Administrator", "options");
+                Dialog.alert(self, "Sorry, you are not allowed to do that. Please contact the Administrator", "options");
                 }
             });
 
@@ -35,17 +35,20 @@ odoo.define("mail_edit/static/src/js/mail_edit.js",
                 ev.stopPropagation();
                 var self = this;
                 ev.preventDefault();
-                               console.log("????mmmm");
-
                 var msg_id = this.message.id;
 
-                await this.rpc({
-                    model: 'mail.message',
-                    method: 'unlink',
-                    args: [[msg_id]],
+               session.user_has_group('mail_edit.group_mail_edit_editor','mail_edit.group_mail_edit_superuser').then(function(has_group) {
+                        if(has_group) {
+                        self.rpc({
+                            model: 'mail.message',
+                            method: 'unlink',
+                            args: [[msg_id]],
 
-                }
-                );
+                        });
+                        } else {
+                        Dialog.alert(self, "Sorry, you are not allowed to do that.Please contact the Administrator", "options");
+                        }
+                    });
             },
 
         });
