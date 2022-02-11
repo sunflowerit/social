@@ -47,5 +47,5 @@ class MailMessage(models.Model):
             if self.env.user.has_group('mail_edit.group_mail_edit_superuser'):
                 message_dict['is_superuser'] = True
             message_dict['is_author'] = self.env.user.partner_id.id == \
-                message_dict['author_id'][0]
+                                        message_dict['author_id'][0]
         return res
