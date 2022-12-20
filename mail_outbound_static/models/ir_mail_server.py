@@ -61,6 +61,9 @@ class IrMailServer(models.Model):
         domain_name = domain_name.lower().strip()
         return True if re.match(valid_domain_name_regex, domain_name) else False
 
+    def _get_default_mail_server_domain(self):
+        return []
+
     @api.model
     def _get_domain_whitelist(self, domain_whitelist_string):
         res = domain_whitelist_string.split(",") if domain_whitelist_string else []
@@ -129,7 +132,11 @@ class IrMailServer(models.Model):
                 mail_server_id = item.id
                 break
         if not mail_server_id:
-            mail_server_id = self.sudo().search([], order="sequence", limit=1).id
+            mail_server_id = self.sudo().search(
+                self._get_default_mail_server_domain(),
+                order="sequence",
+                limit=1
+            ).id
         return mail_server_id
 
     @api.model
