@@ -8,7 +8,7 @@ var _t = core._t;
 
 tour.register('mail_edit_tour', {
     url: "/web",
-}, [tour.STEPS.SHOW_APPS_MENU_ITEM, {
+}, [tour.stepUtils.showAppsMenuItem(), {
     trigger: '.o_app[data-menu-xmlid="mail.menu_root_discuss"]',
     content: _t('Open Apps -> Discuss menu'),
     position: 'right',
