@@ -8,7 +8,7 @@
     "category": "Social Network",
     "website": "https://github.com/OCA/social",
     "author": "Therp BV, Odoo Community Association (OCA)",
-    "license": "AGPL-3",
+    "license": "LGPL-3",
     "application": False,
     "installable": True,
     "depends": [
@@ -20,9 +20,7 @@
         "views/assets.xml",
         "views/compose_message.xml",
     ],
-    "demo": [
-        "demo/data.xml"
-    ],
+    "data": ["demo/mail_edit_demo.xml"],
     "qweb": [
         "static/src/components/message/mail_edit.xml",
     ],

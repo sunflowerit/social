@@ -1,4 +1,1 @@
-* Better live-updating of an edited message in the thread, right now only
-  'body' parameter is updated.
-* For the body parameter, call processBody to correctly handle emoji.
-* Live-update edited message through all threads, using the message bus.
+* if you move a message to an object from a channel, it should also be removed from the channel.

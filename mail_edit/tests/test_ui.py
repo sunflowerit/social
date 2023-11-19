@@ -10,7 +10,6 @@ class TestMailEdit(odoo.tests.HttpCase):
         self.phantom_js(
             "/web",
             "odoo.__DEBUG__.services['web_tour.tour'].run('mail_edit_tour')",
-            "odoo.__DEBUG__.services["
-            "'web_tour.tour'].tours.mail_edit_tour.ready",
+            "odoo.__DEBUG__.services[" "'web_tour.tour'].tours.mail_edit_tour.ready",
             login="demo",
         )

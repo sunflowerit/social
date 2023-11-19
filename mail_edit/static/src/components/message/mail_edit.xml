@@ -2,7 +2,8 @@
 <template>
     <t t-inherit="mail.Message" t-inherit-mode="extension" owl="1">
         <xpath expr="//div[hasclass('o_Message_headerCommands')]" t-operation="inside">
-            <span role="button" class="o_Message_command o_Message_headerCommand o_Message_threadEditIcon">
+            <span role="button"
+                  class="o_Message_command o_Message_headerCommand o_Message_threadEditIcon" groups="mail_edit.group_mail_edit_editor">
                 <i
                     class="fa o_Message_Edit fa-pencil"
                     t-att-data-message-id="message.localId"
@@ -10,7 +11,7 @@
                     title="Edit"
                 />
             </span>
-            <span role="button" class="o_Message_command o_Message_headerCommand o_Message_threadDeleteIcon">
+            <span role="button" class="o_Message_command o_Message_headerCommand o_Message_threadDeleteIcon" groups="mail_edit.group_mail_edit_editor">
                 <i
                     class="fa o_Message_Delete fa-trash"
                     t-att-data-message-id="message.localId"
