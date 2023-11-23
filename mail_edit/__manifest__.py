@@ -20,7 +20,7 @@
         "views/assets.xml",
         "views/compose_message.xml",
     ],
-    "data": ["demo/mail_edit_demo.xml"],
+    "demo": ["demo/mail_edit_demo.xml"],
     "qweb": [
         "static/src/components/message/mail_edit.xml",
     ],
