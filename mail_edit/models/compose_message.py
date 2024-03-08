@@ -7,6 +7,27 @@ from odoo import api, fields, models
 class MailMessage(models.Model):
     _inherit = "mail.message"
 
+    can_edit_message = fields.Boolean(compute="_compute_can_edit_message")
+
+    def _compute_can_edit_message(self):
+        """Disallow editing message in ui"""
+        groups = [
+            "mail_edit.group_mail_edit_editor",
+            "mail_edit.group_mail_edit_superuser",
+        ]
+        self_user = self.env.user
+        for message in self:
+            message.can_edit_message = False
+            if not any(self_user.has_group(x) for x in groups):
+                continue
+            # superuser
+            if self_user.has_group(groups[1]):
+                message.can_edit_message = True
+                continue
+            # own message
+            if self_user.has_group(groups[0]):
+                message.can_edit_message = message.create_uid == self_user
+
     @api.model
     def _get_model_selection(self):
         # Get models that supports messages, exclude transient models
