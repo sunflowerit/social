@@ -10,9 +10,10 @@
             <sheet>
                 <group>
                     <group>
+                        <field name="can_edit_message" invisible="1" />
                         <field
                                 name="subject"
-                                groups="mail_edit.group_mail_edit_editor,mail_edit.group_mail_edit_superuser"
+                                attrs="{'readonly':[('can_edit_message','=', False)]}"
                             />
                         <field name="date" readonly="1" />
                         <field name="message_type" readonly="1" />
@@ -21,7 +22,7 @@
                     <group>
                         <field
                                 name="destination_object_id"
-                                groups="mail_edit.group_mail_edit_mover,mail_edit.group_mail_edit_superuser"
+                                attrs="{'readonly':[('can_edit_message','=', False)]}"
                             />
                         <field name="model" invisible="1" />
                         <field name="res_id" invisible="1" />
@@ -30,10 +31,15 @@
                 </group>
                 <field
                         name="body"
-                        groups="mail_edit.group_mail_edit_editor,mail_edit.group_mail_edit_superuser"
+                        attrs="{'readonly':[('can_edit_message','=', False)]}"
                     />
                 <footer>
-                    <button string="Save" special="save" class="btn-primary" />
+                    <button
+                            string="Save"
+                            special="save"
+                            class="btn-primary"
+                            attrs="{'invisible':[('can_edit_message','=', False)]}"
+                        />
                     <button string="Discard" class="btn-secondary" special="cancel" />
                 </footer>
             </sheet>
