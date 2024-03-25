@@ -24,11 +24,9 @@ msgid "Allow to move mails to this model."
 msgstr "Sta toe om berichten naar dit model te verplaatsen."
 
 #. module: mail_edit
-#. openerp-web
 #: code:addons/mail_edit/static/src/xml/mail_edit.xml:11
-#, python-format
 msgid "Delete"
-msgstr ""
+msgstr "Verwijderen"
 
 #. module: mail_edit
 #: field:mail.message,destination_object_id:0
@@ -36,60 +34,53 @@ msgid "Destination object"
 msgstr "Doelobject"
 
 #. module: mail_edit
-#. openerp-web
 #: code:addons/mail_edit/static/src/xml/mail_edit.xml:8
-#, python-format
 msgid "Edit Mail"
 msgstr "Bericht wijzigen"
 
 #. module: mail_edit
-#: model:ir.actions.act_window,name:mail_edit.mail_edit_action
+#: model_terms:ir.actions.act_window,name:mail_edit.mail_edit_action
 msgid "Edit or Move Message"
 msgstr "Wijzigen of verplaatsen van bericht"
 
 #. module: mail_edit
-#: model:res.groups,name:mail_edit.group_mail_edit_superuser
-#, fuzzy
+#: model_terms:res.groups,name:mail_edit.group_mail_edit_superuser
 msgid "Edit or Move anyone's mail messages"
 msgstr "Wijzigen of verplaatsen van bericht"
 
 #. module: mail_edit
-#: model:res.groups,name:mail_edit.group_mail_edit_editor
-#, fuzzy
+#: model_terms:res.groups,name:mail_edit.group_mail_edit_editor
 msgid "Edit own mail messages"
 msgstr "Berichten wijzigen"
 
 #. module: mail_edit
 #: field:res.request.link,mail_edit:0
-#, fuzzy
 msgid "Mail move"
 msgstr "Bericht wijzigen"
 
 #. module: mail_edit
-#: model:res.groups,comment:mail_edit.group_mail_edit_editor
+#: model_terms:res.groups,comment:mail_edit.group_mail_edit_editor
 msgid "Members of this group are able to edit mail messages."
 msgstr "Leden van deze groep mogen de inhoud van berichten wijzigen."
 
 #. module: mail_edit
-#: model:res.groups,comment:mail_edit.group_mail_edit_mover
+#: model_terms:res.groups,comment:mail_edit.group_mail_edit_mover
 msgid "Members of this group are able to move mails."
 msgstr "Leden van deze groep mogen berichten verplaatsen."
 
 #. module: mail_edit
-#: model:res.groups,comment:mail_edit.group_mail_edit_superuser
-#, fuzzy
+#: model_terms:res.groups,comment:mail_edit.group_mail_edit_superuser
 msgid "Members of this group are able to move or edit mails"
 msgstr "Leden van deze groep mogen berichten verplaatsen."
 
 #. module: mail_edit
-#: model:ir.model,name:mail_edit.model_mail_message
+#: model_terms:ir.model,name:mail_edit.model_mail_message
 #: view:mail.message:mail_edit.mail_edit_form
 msgid "Message"
 msgstr "Bericht"
 
 #. module: mail_edit
-#: model:res.groups,name:mail_edit.group_mail_edit_mover
-#, fuzzy
+#: model_terms:res.groups,name:mail_edit.group_mail_edit_mover
 msgid "Move own mail messages"
 msgstr "Berichten verplaatsen"
 
