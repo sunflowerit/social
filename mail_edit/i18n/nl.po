@@ -1,90 +1,165 @@
-# Translation of Mail edit module.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * mail_edit
+#	* mail_edit
 #
-# Translators:
-# Tom Blauwendraat <tom@sunflowerweb.nl>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-19 14:40+0000\n"
-"PO-Revision-Date: 2017-08-18 16:51+0000\n"
-"Last-Translator: Erwin van der Ploeg <erwin@odooexperts.nl>\n"
-"Language-Team: Dutch (http://www.transifex.com/odoo/odoo-8/language/nl/)\n"
-"Language: nl\n"
+"POT-Creation-Date: 2024-03-25 08:09+0000\n"
+"PO-Revision-Date: 2024-03-25 08:09+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: \n"
 
 #. module: mail_edit
-#: help:res.request.link,mail_edit:0
-msgid "Allow to move mails to this model."
-msgstr "Sta toe om berichten naar dit model te verplaatsen."
+#. openerp-web
+#: code:addons/mail_edit/static/src/js/tour.js:22
+#, python-format
+msgid "Add a new Channel"
+msgstr ""
 
 #. module: mail_edit
-#: code:addons/mail_edit/static/src/xml/mail_edit.xml:11
-msgid "Delete"
-msgstr "Verwijderen"
+#. openerp-web
+#: code:addons/mail_edit/static/src/js/tour.js:33
+#, python-format
+msgid "Add some text message to the composer chat box"
+msgstr ""
 
 #. module: mail_edit
-#: field:mail.message,destination_object_id:0
+#. openerp-web
+#: code:addons/mail_edit/static/src/js/tour.js:18
+#, python-format
+msgid "Channels -> Add button"
+msgstr ""
+
+#. module: mail_edit
+#. openerp-web
+#: code:addons/mail_edit/static/src/js/tour.js:58
+msgid "Click the Delete Icon on the last message"
+msgstr ""
+
+#. module: mail_edit
+#. openerp-web
+#: code:addons/mail_edit/static/src/js/tour.js:45
+msgid "Click the Edit Icon"
+msgstr ""
+
+#. module: mail_edit
+#. openerp-web
+#: code:addons/mail_edit/static/src/js/tour.js:63
+msgid "Confirm Deletion"
+msgstr ""
+
+#. module: mail_edit
+#. openerp-web
+#: code:addons/mail_edit/static/src/xml/mail_edit.xml:10
+msgid "Delete Mail"
+msgstr "Bericht verwijderen"
+
+#. module: mail_edit
+#: model:ir.model.fields,field_description:mail_edit.field_mail_compose_message__destination_object_id
+#: model:ir.model.fields,field_description:mail_edit.field_mail_mail__destination_object_id
+#: model:ir.model.fields,field_description:mail_edit.field_mail_message__destination_object_id
 msgid "Destination object"
 msgstr "Doelobject"
 
 #. module: mail_edit
-#: code:addons/mail_edit/static/src/xml/mail_edit.xml:8
+#: model_terms:ir.ui.view,arch_db:mail_edit.mail_edit_form
+msgid "Discard"
+msgstr "Negeren"
+
+#. module: mail_edit
+#. openerp-web
+#: code:addons/mail_edit/static/src/js/mail_edit.js:83
+msgid "Do you really want to delete this message?"
+msgstr ""
+
+#. module: mail_edit
+#. openerp-web
+#: code:addons/mail_edit/static/src/xml/mail_edit.xml:7
+#, python-format
 msgid "Edit Mail"
 msgstr "Bericht wijzigen"
 
 #. module: mail_edit
-#: model_terms:ir.actions.act_window,name:mail_edit.mail_edit_action
+#. openerp-web
+#: code:addons/mail_edit/static/src/js/tour.js:49
+#, python-format
+msgid "Edit Mail Subject"
+msgstr ""
+
+#. module: mail_edit
+#: model:ir.actions.act_window,name:mail_edit.mail_edit_action
 msgid "Edit or Move Message"
 msgstr "Wijzigen of verplaatsen van bericht"
 
 #. module: mail_edit
-#: model_terms:res.groups,name:mail_edit.group_mail_edit_superuser
+#: model:res.groups,name:mail_edit.group_mail_edit_superuser
 msgid "Edit or Move anyone's mail messages"
-msgstr "Wijzigen of verplaatsen van bericht"
+msgstr "Iedereens berichten verplaatsen of wijzigen"
 
 #. module: mail_edit
-#: model_terms:res.groups,name:mail_edit.group_mail_edit_editor
+#: model:res.groups,name:mail_edit.group_mail_edit_editor
 msgid "Edit own mail messages"
-msgstr "Berichten wijzigen"
+msgstr "Eigen berichten wijzigen"
 
 #. module: mail_edit
-#: field:res.request.link,mail_edit:0
-msgid "Mail move"
-msgstr "Bericht wijzigen"
-
-#. module: mail_edit
-#: model_terms:res.groups,comment:mail_edit.group_mail_edit_editor
+#: model:res.groups,comment:mail_edit.group_mail_edit_editor
 msgid "Members of this group are able to edit mail messages."
 msgstr "Leden van deze groep mogen de inhoud van berichten wijzigen."
 
 #. module: mail_edit
-#: model_terms:res.groups,comment:mail_edit.group_mail_edit_mover
+#: model:res.groups,comment:mail_edit.group_mail_edit_mover
 msgid "Members of this group are able to move mails."
 msgstr "Leden van deze groep mogen berichten verplaatsen."
 
 #. module: mail_edit
-#: model_terms:res.groups,comment:mail_edit.group_mail_edit_superuser
+#: model:res.groups,comment:mail_edit.group_mail_edit_superuser
 msgid "Members of this group are able to move or edit mails"
-msgstr "Leden van deze groep mogen berichten verplaatsen."
+msgstr "Leden van deze groep mogen zowel berichten wijzigen als verplaatsen"
 
 #. module: mail_edit
-#: model_terms:ir.model,name:mail_edit.model_mail_message
-#: view:mail.message:mail_edit.mail_edit_form
+#: model:ir.model,name:mail_edit.model_mail_message
+#: model_terms:ir.ui.view,arch_db:mail_edit.mail_edit_form
 msgid "Message"
 msgstr "Bericht"
 
 #. module: mail_edit
-#: model_terms:res.groups,name:mail_edit.group_mail_edit_mover
+#: model:res.groups,name:mail_edit.group_mail_edit_mover
 msgid "Move own mail messages"
-msgstr "Berichten verplaatsen"
+msgstr "Eigen berichten verplaatsen"
 
 #. module: mail_edit
-#: help:mail.message,destination_object_id:0
+#: model:ir.model.fields,help:mail_edit.field_mail_compose_message__destination_object_id
+#: model:ir.model.fields,help:mail_edit.field_mail_mail__destination_object_id
+#: model:ir.model.fields,help:mail_edit.field_mail_message__destination_object_id
 msgid "Object where the message will be moved to"
 msgstr "Object waar het bericht naartoe verplaatst zal worden"
+
+#. module: mail_edit
+#. openerp-web
+#: code:addons/mail_edit/static/src/js/tour.js:13
+msgid "Open Apps -> Discuss menu"
+msgstr ""
+
+#. module: mail_edit
+#. openerp-web
+#: code:addons/mail_edit/static/src/js/tour.js:41
+msgid "Post your message on the thread"
+msgstr ""
+
+#. module: mail_edit
+#: model_terms:ir.ui.view,arch_db:mail_edit.mail_edit_form
+msgid "Save"
+msgstr "Opslaan"
+
+#. module: mail_edit
+#. openerp-web
+#: code:addons/mail_edit/static/src/js/tour.js:54
+msgid "Save Changes"
+msgstr "Wijzigingen opslaan"
+
